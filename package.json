@@ -1,0 +1,21 @@
+{
+  "name": "github-freshservice-app",
+  "version": "1.0.0",
+  "description": "To create tickets in freshservice",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=18.16.0",
+    "npm": ">=9.5.1"
+  },
+  "keywords": ["GitHub","issue","freshservice"],
+  "author": "RedFerns Tech",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "axios": "^1.7.2"
+  }
+}
