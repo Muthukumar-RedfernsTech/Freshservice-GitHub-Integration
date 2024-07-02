@@ -7,7 +7,8 @@ const FRESHSERVICE_API_KEY = 'ujv5sxBYLBAA9WLIRP';
 
 app.post('/webhook', express.json({type: 'application/json'}), async (req, res) => {
     const githubIssue = req.body.issue;
-    if (githubIssue.body && githubIssue.body.includes('@create-freshservice-ticket')) {
+    const action = req.body.action;
+    if (action === 'opened' && githubIssue.body && githubIssue.body.includes('@create-freshservice-ticket')) {
         try {
             const response = await axios.post(
                 `https://${FRESHSERVICE_DOMAIN}/api/v2/tickets`,
