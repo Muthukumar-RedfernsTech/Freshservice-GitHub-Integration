@@ -16,7 +16,10 @@ app.post('/webhook', express.json({type: 'application/json'}), async (req, res) 
                     "subject": `${githubIssue.body}, GitHub Issue URL: ${githubIssue.url}`,
                     "priority": 1,
                     "status": 2,
-                    "requester_id": 29001720875
+                    "requester_id": 29001720875,
+                    "custom_fields": {
+                      "github_issue_url": `${githubIssue.url}`
+                    }
                 },
                 {
                     headers: {
