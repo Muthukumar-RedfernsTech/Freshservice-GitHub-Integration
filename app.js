@@ -2,8 +2,8 @@ const express = require('express');
 const axios = require('axios');
 const app = express();
 
-const FRESHSERVICE_DOMAIN = 'redtech.freshservice.com';
-const FRESHSERVICE_API_KEY = 'ujv5sxBYLAA9WLIRP';
+const FRESHSERVICE_DOMAIN = 'redfernstech.freshservice.com';
+const FRESHSERVICE_API_KEY = 'ujv5sxBYLBAA9WLIRP';
 
 app.post('/webhook', express.json({type: 'application/json'}), async (req, res) => {
     const githubIssue = req.body.issue;
